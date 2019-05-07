@@ -1,0 +1,41 @@
+<view>
+  <view class='weui-article'>
+    <view class="weui-article__h1 title">
+      <text>{{lessonInfo.title}}</text>
+      <button class="{{lessonInfo.subscribed?'subscribed':''}}" data-status="{{lessonInfo.subscribed?0:1}}" bindtap='subscribeLesson'>{{lessonInfo.subscribed?'已订阅':'+订阅'}}</button>
+    </view>
+    <view class="weui-media-box__desc mes">
+      <text>作者：{{lessonInfo.author}}</text>
+      <text>分类：{{lessonInfo.type}}</text>
+      <text>上传于{{lessonInfo.date}}</text>
+    </view>
+    <view class='weui-media-box__desc mes'>
+      <text>{{lessonInfo.likes.length}}人赞过</text>
+      <text>{{lessonInfo.views}}人看过</text>
+    </view>
+    <view class="weui-article__section">
+      <view class="weui-article__title">{{lessonInfo.describe}}</view>
+      <view><view wx:for="{{lessonInfo.articleList}}">{{item.title}}</view></view>
+    </view>
+  </view>
+  <view class='comment-wrap'>
+    <text class='title'>评论区</text>
+    <view wx:if="{{lessonInfo.discussion.length>0}}">
+      <view wx:for="{{lessonInfo.discussion}}" class='comment'>
+        <text class='name'>{{item.name}}:</text>{{item.content}}
+      </view>
+    </view>
+    <view wx:else class='no-comment'>还没有评论哦，来抢沙发吧~</view>
+  </view>
+  <view class='eva-bar'>
+    <button bindtap='likeLesson' class="{{lessonInfo.liked?'liked':''}}" data-status="{{lessonInfo.liked?0:1}}">{{lessonInfo.liked?'已赞':'赞'}}</button>
+    <button bindtap='showPop'>评论</button>
+    <button bindtap='collectLesson' class="{{lessonInfo.collected?'collected':''}}" data-status="{{lessonInfo.collected?0:1}}">{{lessonInfo.collected?'已收藏':'收藏'}}</button>
+  </view>
+  <view class='comment-pop' wx:if="{{showCommentPop}}" bindtap='closePop'>
+    <view class='comment' catchtap='showPop'>
+      <textarea bindinput='inputComment'></textarea>
+      <button type="primary" class="comment-btn" bindtap='postComment' value="{{commentInput}}">评论</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,97 @@
+.mes {
+  margin-top: 10rpx;
+}
+.mes text {
+  margin-right: 20rpx;
+}
+.eva-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.eva-bar button {
+  flex: 1;
+  border-radius: 0;
+  font-size: 24rpx;
+  background-color: #fff;
+}
+.liked, .collected {
+  color: #409EFF;
+}
+.comment-wrap {
+  padding: 0 15px;
+  font-size: 24rpx;
+}
+.comment-wrap .title {
+  font-size: 28rpx;
+}
+.comment-wrap .comment {
+  padding: 8px 0;
+}
+.comment-wrap .name {
+  color: #409EFF;
+  margin-right: 3px;
+}
+.comment-wrap .no-comment {
+  text-align: center;
+  padding-top: 20px;
+  color: #999;
+}
+.comment-wrap .title::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  height: 1px;
+  background-color: #999;
+}
+.comment-pop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+.comment-pop .comment {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.comment textarea {
+  width: 100%;
+  height: 150rpx;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.title {
+  position: relative;
+  padding-right: 30rpx;
+}
+.title button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 13px;
+  background-color: #409EFF;
+  color: #fff;
+}
+.title .subscribed {
+  background-color: #e1e1e1;
+  color: #999;
+}

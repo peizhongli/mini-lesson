@@ -1,0 +1,29 @@
+.mes {
+  margin-top: 5rpx
+}
+.mes text {
+  margin-right: 20rpx
+}
+.searchbar {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #e1e1e1;
+}
+.search-btn, .search-input {
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+}
+.search-input {
+  width: 60%;
+  border-radius: 3px;
+  flex: 1;
+  padding-left: 5px;
+  background-color: #fff;
+  font-size: 12px;
+}
+.search-btn {
+  text-align: center;
+  margin-left: 5px;
+  line-height: 1.5;
+}

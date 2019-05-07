@@ -1,0 +1,21 @@
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">邮箱</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入邮箱" confirm-type="next" focus bindinput="inputEmail" value='{{email}}'/>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">密码</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input password class="weui-input" placeholder="请输入密码" confirm-type="done" bindinput='inputPassword' bindconfirm="toLogin" value='{{password}}' />
+    </view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="toLogin">立即登录</button>
+  </view>
+</view>

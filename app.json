@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/lessonInfo/lessonInfo",
+    "pages/mine/mine",
+    "pages/collections/collections",
+    "pages/subscription/subscription",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#409EFF",
+    "navigationBarTitleText": "mini-lesson",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#409EFF",
+    "list": [
+      {
+        "iconPath": "./static/icons/home.png",
+        "selectedIconPath": "./static/icons/home_active.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./static/icons/subscribe.png",
+        "selectedIconPath": "./static/icons/subscribe_active.png",
+        "pagePath": "pages/subscription/subscription",
+        "text": "订阅"
+      },
+      {
+        "iconPath": "./static/icons/mine.png",
+        "selectedIconPath": "./static/icons/mine_active.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

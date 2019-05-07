@@ -1,0 +1,11 @@
+<view id="userInfo">
+  <view class='main bar'>
+    <image src="{{userInfo.avatar}}" class='avatar'></image>
+    <view class='main-mes'>
+      <text class='name'>用户名：{{userInfo.name}}</text>
+      <text class='email'>邮箱：{{userInfo.email}}</text>
+    </view>
+  </view>
+  <navigator url='../collections/collections' class='bar'>我的收藏</navigator>
+  <view class='bar' bindtap='logout'>退出登录</view>
+</view>
