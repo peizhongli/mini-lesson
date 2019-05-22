@@ -1,0 +1,11 @@
+/* pages/editName/editName.wxss */
+#edit-name {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f8f9;
+}
+.input-box {
+  padding: 5px 15px;
+  color: #333;
+  background-color: #fff;
+}

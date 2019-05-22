@@ -6,6 +6,7 @@ Page({
    */
   data: {
     lessonList: [],
+    hotlist: [],
     pageParams: {
       currentPage: 1,
       pageSize: 10,
@@ -20,6 +21,7 @@ Page({
    */
   onLoad: function(options) {
     this.getLessonList()
+    this.getHotList()
   },
 
   /**
@@ -89,7 +91,7 @@ Page({
         title: this.data.searchData
       },
       header: {
-        'Authorization': global.globalData.userToken
+        'Authorization': global.globalData.userToken,
       },
       success(res) {
         if (res.statusCode === 401) {
@@ -113,6 +115,28 @@ Page({
         _this.setData({
           showLoading: false
         })
+      }
+    })
+  },
+
+  // 加载热门列表
+  getHotList: function (data) {
+    let _this = this
+    wx.request({
+      url: 'http://localhost:5000/api/profiles/hot',
+      header: {
+        'Authorization': global.globalData.userToken,
+      },
+      success(res) {
+        if (res.statusCode === 401) {
+          wx.redirectTo({
+            url: '../login/login',
+          })
+        } else {
+          _this.setData({
+            hotlist: res.data.data
+          })
+        }
       }
     })
   },

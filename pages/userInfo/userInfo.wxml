@@ -1,0 +1,31 @@
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='chooseAvatar'>
+    <view class="weui-cell__bd">头像</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">
+      <image src="{{userInfo.avatar}}" class='avatar' catchtap='showHugeAvatar'></image>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='showPop' data-value="{{userInfo.name}}" data-type="name">
+    <view class="weui-cell__bd">用户名</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.name}}</view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='showPop' data-value="{{userInfo.email}}" data-type="email">
+    <view class="weui-cell__bd">邮箱</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.email}}</view>
+  </view>
+</view>
+<button bindtap='saveUserInfo' type="primary" class='save-btn'>保存</button>
+<view class='user-pop' wx:if="{{showInputPop}}" bindtap='closePop'>
+  <view class='user' catchtap='showPop'>
+    <text>请输入{{inputType==='name'?'用户名':'邮箱'}}：</text>
+    <input bindinput='inputUser' value="{{userInput}}"></input>
+    <button type="primary" size='small' class="confirm-btn" catchtap='confirmInput'>确定</button>
+  </view>
+</view>
+<view class='canvas-wrap' wx:if="{{showCanvas}}">
+  <canvas canvas-id="myCanvas" style="width: 200px; height: 200px;" catchtap="chooseAvatar"/>
+  <view class='button-wrap'>
+    <button type='primary' catchtap="updateAvatar" size='small' disabled="{{newAvatar==''?true:false}}">确定</button>
+    <button bindtap='closeCanvas'>取消</button>
+  </view>
+</view>

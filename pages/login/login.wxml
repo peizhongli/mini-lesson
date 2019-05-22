@@ -4,7 +4,7 @@
       <view class="weui-label">邮箱</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入邮箱" confirm-type="next" focus bindinput="inputEmail" value='{{email}}'/>
+      <input class="weui-input" placeholder="请输入邮箱" confirm-type="next" focus bindinput="inputEmail" value='{{email}}' />
     </view>
   </view>
   <view class="weui-cell weui-cell_input">
@@ -18,4 +18,7 @@
   <view class="weui-btn-area">
     <button class="weui-btn" type="primary" bindtap="toLogin">立即登录</button>
   </view>
+</view>
+<view class='to-regi'>还没有账号？立即
+  <navigator url='/pages/register/register'>注册</navigator>
 </view>

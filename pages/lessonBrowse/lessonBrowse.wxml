@@ -1,21 +1,15 @@
 <view>
   <view class='weui-article'>
     <view class="weui-article__h1 title">
-      <text>{{lessonInfo.title}}</text>
-      <button class="{{lessonInfo.subscribed?'subscribed':''}}" data-status="{{lessonInfo.subscribed?0:1}}" bindtap='subscribeLesson'>{{lessonInfo.subscribed?'已订阅':'+订阅'}}</button>
+      <text>{{lessonContent.title}}</text>
     </view>
     <view class="weui-media-box__desc mes">
       <text>作者：{{lessonInfo.author}}</text>
       <text>分类：{{lessonInfo.type}}</text>
-      <text>上传于{{lessonInfo.date}}</text>
-    </view>
-    <view class='weui-media-box__desc mes'>
-      <text>{{lessonInfo.likes.length}}人赞过</text>
-      <text>{{lessonInfo.views}}人看过</text>
+      <text>上传于{{lessonContent.date}}</text>
     </view>
     <view class="weui-article__section">
-      <view class="weui-article__title">{{lessonInfo.describe}}</view>
-      <navigator url="../lessonBrowse/lessonBrowse?lessonId={{lessonInfo.id}}&index={{index}}" wx:for="{{lessonInfo.articleList}}" wx:key="{{lessonInfo.id}}">{{item.title}}</navigator>
+      <view class='weui-article__p'>{{lessonContent.content}}</view>
     </view>
   </view>
   <view class='comment-wrap'>
@@ -34,8 +28,8 @@
   </view>
   <view class='comment-pop' wx:if="{{showCommentPop}}" bindtap='closePop'>
     <view class='comment' catchtap='showPop'>
-      <textarea bindinput='inputComment' value="{{commentInput}}"></textarea>
-      <button type="primary" class="comment-btn" bindtap='postComment'>评论</button>
+      <textarea bindinput='inputComment'></textarea>
+      <button type="primary" class="comment-btn" bindtap='postComment' value="{{commentInput}}">评论</button>
     </view>
   </view>
 </view>

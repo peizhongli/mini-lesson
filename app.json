@@ -2,18 +2,23 @@
   "pages": [
     "pages/home/home",
     "pages/login/login",
+    "pages/register/register",
     "pages/index/index",
     "pages/lessonInfo/lessonInfo",
+    "pages/lessonBrowse/lessonBrowse",
     "pages/mine/mine",
     "pages/collections/collections",
     "pages/subscription/subscription",
+    "pages/userInfo/userInfo",
+    "pages/editUserInfo/editUserInfo",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#409EFF",
     "navigationBarTitleText": "mini-lesson",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f6f8f9"
   },
   "tabBar": {
     "color": "#999",

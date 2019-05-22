@@ -1,0 +1,4 @@
+<!--pages/editName/editName.wxml-->
+<view id="edit-name">
+  <input value="{{name}}" placeholder='请输入用户名' bindfocus="onFocus" bindblur="onBlur" bindinput='inputName' class='input-box'></input>
+</view>

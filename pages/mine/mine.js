@@ -73,7 +73,6 @@ Page({
         'Authorization': global.globalData.userToken
       },
       success(res) {
-        console.log(res)
         _this.setData({
           userInfo: res.data
         })

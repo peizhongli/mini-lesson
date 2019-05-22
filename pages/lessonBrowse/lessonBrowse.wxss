@@ -1,5 +1,5 @@
 .mes {
-  margin-top: 10rpx;
+  margin-bottom: 20rpx;
 }
 .mes text {
   margin-right: 20rpx;

@@ -1,0 +1,10 @@
+.to-regi {
+  font-size: 13px;
+  margin: 10rpx auto 0;
+  padding-right: 40rpx;
+  text-align: right;
+}
+.to-regi navigator {
+  display: inline-block;
+  color: #409EFF;
+}

@@ -14,6 +14,8 @@
           <text>{{item.views}}人看过</text>
         </view>
       </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
     </navigator>
     <view class="weui-loadmore" wx:if="{{showLoading}}">
       <view class="weui-loading"></view>

@@ -1,21 +1,25 @@
 /* pages/mine/mine.wxss */
 #userInfo {
+  height: 100vh;
   color: #333;
-  background-color: #e1e1e1;
+  background-color: #f6f8f9;
 }
 #userInfo .bar {
   display: flex;
   padding: 10px 15px;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #f6f8f9;
   font-size: 13px;
   background-color: #fff;
+}
+#userInfo .logout {
+  margin-top: 5px;
 }
 #userInfo .main {
   margin-bottom: 5px;
 }
 #userInfo .main image {
   width: 150rpx;
-  height:150rpx;
+  height: 150rpx;
   border-radius: 50%;
 }
 #userInfo .main-mes {

@@ -71,7 +71,7 @@ Page({
     
   },
 
-  // 获取文章详情
+  // 获取课程详情
   getLessonInfo: function() {
     let _this = this
     wx.request({

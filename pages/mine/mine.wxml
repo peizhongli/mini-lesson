@@ -1,11 +1,13 @@
-<view id="userInfo">
-  <view class='main bar'>
+<view id="userInfo" class='weui-cells weui-cells_after-title'>
+  <navigator url='../userInfo/userInfo' class='main bar weui-cell weui-cell_access'>
     <image src="{{userInfo.avatar}}" class='avatar'></image>
     <view class='main-mes'>
       <text class='name'>用户名：{{userInfo.name}}</text>
       <text class='email'>邮箱：{{userInfo.email}}</text>
     </view>
-  </view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
   <navigator url='../collections/collections' class='bar'>我的收藏</navigator>
-  <view class='bar' bindtap='logout'>退出登录</view>
+  <navigator open-type="switchTab" url='../subscription/subscription' class='bar'>我的订阅</navigator>
+  <view class='bar logout' bindtap='logout'>退出登录</view>
 </view>
